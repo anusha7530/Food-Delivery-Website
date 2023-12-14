@@ -6,6 +6,7 @@
     <title> Best Online Food Delivery Service in India | DoorStepMeal.com</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="screen and (max-width: 1100px)" href="css/phone.css">
+     <link rel="stylesheet" href="css/login.css" />
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Baloo+Bhai+2&family=Baloo+Bhaijaan+2&family=Barriecito&family=Bree+Serif&family=Poppins:wght@100&display=swap" rel="stylesheet">
 
 </head>
@@ -25,7 +26,10 @@
         <h1 class="h-primary">Welcome to DoorStepMeal</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nesciunt itaque consectetur!</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <buttton class="btn">Order Now</buttton>
+        <buttton class="btn" id="popup1" onclick="myFunction()"
+        >First Few Deliveries are <strong>Free!</strong>
+        <span class="popuptext" id="myPopup">Login to avail!</span></buttton
+      >
     </section>
     <section id="services-container">
         <h1 class="h-primary center">Our Services</h1>
@@ -47,6 +51,54 @@
             </div>           
         </div>
     </section>
+    <div id="loginbody">
+      <a href="#popup" class="trigger">Login to avail our services</a>
+      <div id="popup" class="overlay">
+        <div class="wrapper">
+          <a href="#" class="close">&times;</a>
+          <div class="column details">
+            <div class="signin">
+              <h1>Sign In</h1>
+              <input type="email" placeholder="Username" />
+              <input type="password" placeholder="Password" />
+              <a href="#">Forgot Password?</a>
+              <button class="form-submit">Sign In</button>
+              <span
+                >You don't have an account yet?
+                <button id="signin">Create new account!</button></span
+              >
+            </div>
+
+            <div class="signup">
+              <h1>Sign Up</h1>
+              <input type="name" placeholder="Full Name" />
+              <input type="email" placeholder="Username" />
+              <input type="password" placeholder="Password" />
+              <button class="form-submit">Sign In</button>
+              <span
+                >Already have an account?<button id="signup">
+                  Login Now
+                </button></span
+              >
+            </div>
+          </div>
+
+          <div class="column content">
+            <div class="signin">
+              <h1>Welcome Back!</h1>
+              <p>
+                To continue enjoying our services, enter your login credentials.
+              </p>
+            </div>
+            <div class="signup">
+              <h1>Welcome to DoorStepMeal!</h1>
+              <p>Enter your details to signup and experience our services.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
         <section id="client-section">
             <h1 class="h-primary center">Our Clients</h1>
             <div id="clients">
@@ -98,6 +150,18 @@
                 Copyright &copy; www.doorStepMeal.com. All rights reserved!
             </div>
         </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+  $(".signup").hide();
+  $("#signin, #signup").on("click", function () {
+    $(".signin,.signup").toggle();
+  });
+
+  function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
+</script>
 
 
     
