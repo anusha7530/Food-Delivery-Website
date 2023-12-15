@@ -162,6 +162,9 @@ html{
 #services .box p{
     font-family: 'Bree Serif', serif;
 }
+.box:hover {
+  transform: scale(1.1);
+}
 #client-section{
     position: relative;
      /* height:344px; */
